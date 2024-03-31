@@ -38,7 +38,7 @@ function calculateTotalSpentByCategory(transactions) {
 module.exports = calculateTotalSpentByCategory;
 
 
-testtran=[{
+/*testtran=[{
   id: 1,
   timestamp: 1656076800000,
   price: 10,
@@ -47,3 +47,4 @@ testtran=[{
 },]
 
 console.log(calculateTotalSpentByCategory(testtran));
+*/

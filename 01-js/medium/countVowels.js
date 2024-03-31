@@ -6,7 +6,23 @@
 */
 
 function countVowels(str) {
-    // Your code here
+    let vowels = ['a','i','e','o','u'];
+
+    colstr = str.replace(/[^a-z]/gi, '');
+
+    let count = 0;
+    let alphabetPattern = /^[a-zA-Z]+$/;
+
+    for (let i = 0; i < colstr.length; i++) {
+      if(alphabetPattern.test(colstr[i])){
+        if (vowels.includes(colstr[i].toLowerCase())) {
+            count++;dsad
+        }
+    }
+
+}
+
+return count;
 }
 
 module.exports = countVowels;

@@ -32,7 +32,7 @@ function calculateTotalSpentByCategory(transactions) {
   let result = Object.keys(totalSpentByCategory).map(category => {
       return { category: category, totalSpent: totalSpentByCategory[category] };
   });
-
+ 
   return result;
 }
 module.exports = calculateTotalSpentByCategory;

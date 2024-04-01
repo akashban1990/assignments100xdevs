@@ -9,5 +9,26 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    let start = new Date(); // Start time
+
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+
+    let end = new Date(); // End time
+
+    let timeInSeconds = (end - start) / 1000; // Convert milliseconds to seconds
+
+    console.log(`Sum: ${sum}`);
+    console.log(`Time: ${timeInSeconds} seconds`);
+
+    return timeInSeconds;
 }
+
+console.log(calculateTime(100));
+
+console.log(calculateTime(100000));
+
+
+console.log(calculateTime(10000000000));

@@ -34,8 +34,8 @@ class Calculator {
   }
 
   divide(number) {
-      if (number == 0) {
-          throw new Error("Cannot divide by zero");
+      if (number === 0) {
+          throw Error("Cannot divide by zero");
       }
       this.result /= number;
   }
@@ -49,9 +49,13 @@ class Calculator {
   }
 
   calculate(expression) {
+        if(/\/\s*0/.test(expression)){
+            throw new Error("Cannot divide by zero");
+        }
+
       try {
           // Remove extra spaces and non-numerical characters
-          let cleanedExpression = expression.replace(/[^0-9+\-*/() ]/g, '').replace(/\s+/g, ' ');
+          let cleanedExpression = expression.replace(/[^0-9+\-*/(). ]/g, '').replace(/\s+/g, ' ');
           // Evaluate the expression
           this.result = eval(cleanedExpression);
       } catch (error) {
@@ -63,3 +67,4 @@ class Calculator {
 
 
 module.exports = Calculator;
+

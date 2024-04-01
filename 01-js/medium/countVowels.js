@@ -16,7 +16,7 @@ function countVowels(str) {
     for (let i = 0; i < colstr.length; i++) {
       if(alphabetPattern.test(colstr[i])){
         if (vowels.includes(colstr[i].toLowerCase())) {
-            count++;dsad
+            count++;
         }
     }
 

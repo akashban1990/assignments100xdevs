@@ -10,8 +10,7 @@ function isAnagram(str1, str2) {
     return false;
   }
 
-
-
+  
   let colstr1 = str1.replace(/[^a-z]/gi, '').toLowerCase();
   let cleanedStr1 = colstr1.replace(/[^\w\s]/gi, '');
 
